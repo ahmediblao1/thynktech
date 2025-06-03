@@ -14,6 +14,7 @@ export const Portfolio: React.FC<PortfolioProps> = ({ language }) => {
       title: 'Our Portfolio',
       subtitle: 'Showcasing successful digital transformations across Libya',
       viewProject: 'View Project',
+      andMore: 'And many more projects...',
       projects: [
         {
           title: 'Sky Libya Aviation',
@@ -40,7 +41,7 @@ export const Portfolio: React.FC<PortfolioProps> = ({ language }) => {
           title: 'Benghazi Medical Center',
           description: 'Healthcare platform with appointment booking and patient portal',
           category: 'Healthcare System',
-          image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          image: 'https://images.unsplash.com/photo-1576091160549-0bb1c2202675?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
           url: '#'
         },
         {
@@ -54,7 +55,7 @@ export const Portfolio: React.FC<PortfolioProps> = ({ language }) => {
           title: 'Libya Oil Services',
           description: 'Industrial website with service portfolio and client management',
           category: 'Industrial Website',
-          image: 'https://images.unsplash.com/photo-1518709414026-cfce69b3d5ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
           url: '#'
         }
       ]
@@ -63,6 +64,7 @@ export const Portfolio: React.FC<PortfolioProps> = ({ language }) => {
       title: 'أعمالنا',
       subtitle: 'عرض التحولات الرقمية الناجحة عبر ليبيا',
       viewProject: 'عرض المشروع',
+      andMore: 'والعديد من المشاريع الأخرى...',
       projects: [
         {
           title: 'سكاي ليبيا للطيران',
@@ -89,7 +91,7 @@ export const Portfolio: React.FC<PortfolioProps> = ({ language }) => {
           title: 'المركز الطبي بنغازي',
           description: 'منصة رعاية صحية مع حجز المواعيد وبوابة المرضى',
           category: 'نظام صحي',
-          image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          image: 'https://images.unsplash.com/photo-1576091160549-0bb1c2202675?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
           url: '#'
         },
         {
@@ -103,7 +105,7 @@ export const Portfolio: React.FC<PortfolioProps> = ({ language }) => {
           title: 'خدمات ليبيا النفطية',
           description: 'موقع صناعي مع محفظة خدمات وإدارة العملاء',
           category: 'موقع صناعي',
-          image: 'https://images.unsplash.com/photo-1518709414026-cfce69b3d5ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
           url: '#'
         }
       ]
@@ -166,6 +168,12 @@ export const Portfolio: React.FC<PortfolioProps> = ({ language }) => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className={`text-center mt-12 ${isArabic ? 'font-arabic' : ''}`}>
+          <p className={`text-lg text-gray-600 italic ${isArabic ? 'text-right' : ''}`}>
+            {currentContent.andMore}
+          </p>
         </div>
       </div>
     </section>

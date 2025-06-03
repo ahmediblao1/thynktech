@@ -13,7 +13,7 @@ export const LanguageToggle: React.FC<LanguageToggleProps> = ({ language, onTogg
       onClick={onToggle}
       variant="outline"
       size="sm"
-      className="ml-4 font-medium border-white/20 text-white hover:bg-white/10 transition-all duration-300"
+      className="ml-4 font-medium border-gray-400 text-gray-300 bg-gray-900/50 hover:bg-gray-800 hover:text-white hover:border-gray-300 transition-all duration-300"
     >
       {language === 'en' ? 'عربي' : 'English'}
     </Button>

@@ -11,6 +11,13 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ language, onLanguageToggle }) => {
   const isArabic = language === 'ar';
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-6 py-4">
@@ -25,18 +32,18 @@ export const Header: React.FC<HeaderProps> = ({ language, onLanguageToggle }) =>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8 text-white/80">
-            <a href="#about" className="hover:text-white transition-colors">
+            <button onClick={() => scrollToSection('about')} className="hover:text-white transition-colors">
               {isArabic ? 'من نحن' : 'About'}
-            </a>
-            <a href="#services" className="hover:text-white transition-colors">
+            </button>
+            <button onClick={() => scrollToSection('services')} className="hover:text-white transition-colors">
               {isArabic ? 'خدماتنا' : 'Services'}
-            </a>
-            <a href="#portfolio" className="hover:text-white transition-colors">
+            </button>
+            <button onClick={() => scrollToSection('portfolio')} className="hover:text-white transition-colors">
               {isArabic ? 'أعمالنا' : 'Portfolio'}
-            </a>
-            <a href="#contact" className="hover:text-white transition-colors">
+            </button>
+            <button onClick={() => scrollToSection('contact')} className="hover:text-white transition-colors">
               {isArabic ? 'تواصل معنا' : 'Contact'}
-            </a>
+            </button>
           </nav>
 
           <div className="flex items-center">

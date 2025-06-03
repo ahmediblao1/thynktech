@@ -10,6 +10,13 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ language }) => {
   const isArabic = language === 'ar';
 
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const content = {
     en: {
       headline: 'Build. Launch. Grow.',
@@ -67,6 +74,7 @@ export const Hero: React.FC<HeroProps> = ({ language }) => {
               variant="outline" 
               size="lg"
               className="border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white hover:border-gray-500 px-8 py-6 text-lg font-semibold rounded-xl transition-all duration-300"
+              onClick={scrollToContact}
             >
               {currentContent.learnMore}
             </Button>
