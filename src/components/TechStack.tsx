@@ -10,27 +10,27 @@ export const TechStack: React.FC<TechStackProps> = ({ language }) => {
 
   const content = {
     en: {
-      title: 'Our Tech Stack',
-      subtitle: 'We use cutting-edge technologies to build robust and scalable solutions',
+      title: 'Cutting-Edge Technology',
+      subtitle: 'We work with the best tech tools and frameworks in the market to deliver exceptional results',
       technologies: [
-        { name: 'React', description: 'Modern frontend library for building user interfaces' },
-        { name: 'Next.js', description: 'Full-stack React framework for production' },
-        { name: 'Tailwind CSS', description: 'Utility-first CSS framework for rapid UI development' },
-        { name: 'TypeScript', description: 'Typed superset of JavaScript for better code quality' },
-        { name: 'MongoDB', description: 'NoSQL database for flexible data storage' },
-        { name: 'Docker', description: 'Containerization for consistent deployment' }
+        { name: 'Frontend', description: 'Modern frameworks for stunning user interfaces' },
+        { name: 'Backend', description: 'Robust server solutions for scalable applications' },
+        { name: 'Database', description: 'Reliable data storage and management systems' },
+        { name: 'Cloud', description: 'Secure and scalable cloud infrastructure' },
+        { name: 'Mobile', description: 'Cross-platform mobile app development' },
+        { name: 'DevOps', description: 'Automated deployment and monitoring tools' }
       ]
     },
     ar: {
-      title: 'تقنياتنا',
-      subtitle: 'نستخدم أحدث التقنيات لبناء حلول قوية وقابلة للتطوير',
+      title: 'تقنيات متطورة',
+      subtitle: 'نعمل مع أفضل الأدوات والتقنيات في السوق لتقديم نتائج استثنائية',
       technologies: [
-        { name: 'React', description: 'مكتبة حديثة لبناء واجهات المستخدم' },
-        { name: 'Next.js', description: 'إطار عمل React كامل للإنتاج' },
-        { name: 'Tailwind CSS', description: 'إطار عمل CSS للتطوير السريع للواجهات' },
-        { name: 'TypeScript', description: 'مجموعة فائقة مكتوبة من JavaScript لجودة كود أفضل' },
-        { name: 'MongoDB', description: 'قاعدة بيانات NoSQL لتخزين البيانات المرن' },
-        { name: 'Docker', description: 'حاويات للنشر المتسق' }
+        { name: 'الواجهات الأمامية', description: 'أطر عمل حديثة لواجهات مستخدم مذهلة' },
+        { name: 'الخادم الخلفي', description: 'حلول خادم قوية للتطبيقات القابلة للتطوير' },
+        { name: 'قواعد البيانات', description: 'أنظمة تخزين وإدارة بيانات موثوقة' },
+        { name: 'الحوسبة السحابية', description: 'بنية تحتية سحابية آمنة وقابلة للتطوير' },
+        { name: 'التطبيقات المحمولة', description: 'تطوير تطبيقات محمولة متعددة المنصات' },
+        { name: 'DevOps', description: 'أدوات نشر ومراقبة آلية' }
       ]
     }
   };

@@ -58,6 +58,7 @@ export const Hero: React.FC<HeroProps> = ({ language }) => {
             <Button 
               size="lg" 
               className="bg-tech-gradient hover:bg-tech-gradient-reverse text-white px-8 py-6 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              onClick={() => window.open('https://wa.me/218930538733', '_blank')}
             >
               {currentContent.cta}
             </Button>
@@ -65,7 +66,7 @@ export const Hero: React.FC<HeroProps> = ({ language }) => {
             <Button 
               variant="outline" 
               size="lg"
-              className="border-white/20 text-white hover:bg-white/10 px-8 py-6 text-lg font-semibold rounded-xl transition-all duration-300"
+              className="border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white hover:border-gray-500 px-8 py-6 text-lg font-semibold rounded-xl transition-all duration-300"
             >
               {currentContent.learnMore}
             </Button>

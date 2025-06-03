@@ -15,21 +15,33 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ language }) => {
       subtitle: 'Real feedback from businesses we\'ve helped transform digitally',
       testimonials: [
         {
-          name: 'Ahmed Al-Mansouri',
-          position: 'CEO, Libya Tech Solutions',
-          content: 'ThynkTech transformed our outdated website into a modern, fast, and user-friendly platform. Our online sales increased by 300% within the first quarter.',
+          name: 'Captain Ahmed Al-Mansouri',
+          position: 'CEO, Sky Libya Aviation',
+          content: 'ThynkTech delivered an outstanding website that perfectly represents our aviation services. The booking system is smooth and our customers love the user experience.',
           rating: 5
         },
         {
-          name: 'Fatima Benali',
-          position: 'Marketing Director, Tripoli Retail',
-          content: 'The team at ThynkTech understood our vision perfectly. They delivered a beautiful e-commerce platform that exceeded all our expectations.',
+          name: 'Marco Rossi',
+          position: 'Owner, Solo Makarna Restaurant',
+          content: 'Our restaurant website exceeded all expectations. The online ordering system has increased our sales significantly, and the design perfectly captures our Italian heritage.',
+          rating: 5
+        },
+        {
+          name: 'Dr. Fatima Benali',
+          position: 'Director, Benghazi Medical Center',
+          content: 'The healthcare platform ThynkTech built for us has revolutionized how we manage patient appointments and medical records. Highly professional team.',
           rating: 5
         },
         {
           name: 'Omar Khalil',
-          position: 'Founder, Benghazi Startup',
-          content: 'Professional, reliable, and innovative. ThynkTech helped us launch our digital presence with a stunning website and effective SEO strategy.',
+          position: 'Manager, Libya Trade Center',
+          content: 'Professional, reliable, and innovative. ThynkTech helped us establish a strong digital presence with a multilingual corporate website that serves our international clients.',
+          rating: 5
+        },
+        {
+          name: 'Eng. Sarah Al-Zawiya',
+          position: 'Tech Director, Tripoli Tech Hub',
+          content: 'The educational platform they developed has enabled us to reach thousands of students across Libya. The technology stack is robust and scalable.',
           rating: 5
         }
       ]
@@ -39,21 +51,33 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ language }) => {
       subtitle: 'تقييمات حقيقية من الشركات التي ساعدناها في التحول الرقمي',
       testimonials: [
         {
-          name: 'أحمد المنصوري',
-          position: 'الرئيس التنفيذي، ليبيا تك سوليوشنز',
-          content: 'ثِنك تك حولت موقعنا القديم إلى منصة حديثة وسريعة وسهلة الاستخدام. زادت مبيعاتنا الإلكترونية بنسبة 300% خلال الربع الأول.',
+          name: 'الكابتن أحمد المنصوري',
+          position: 'الرئيس التنفيذي، سكاي ليبيا للطيران',
+          content: 'ثِنك تك قدمت موقعاً إلكترونياً متميزاً يمثل خدماتنا الجوية بشكل مثالي. نظام الحجز سلس وعملاؤنا يحبون تجربة المستخدم.',
           rating: 5
         },
         {
-          name: 'فاطمة بن علي',
-          position: 'مديرة التسويق، طرابلس للتجزئة',
-          content: 'فريق ثِنك تك فهم رؤيتنا بشكل مثالي. قدموا منصة تجارة إلكترونية جميلة فاقت كل توقعاتنا.',
+          name: 'ماركو روسي',
+          position: 'مالك مطعم سولو مكرونة',
+          content: 'موقع مطعمنا فاق كل التوقعات. نظام الطلب الإلكتروني زاد مبيعاتنا بشكل كبير، والتصميم يعكس تراثنا الإيطالي بشكل مثالي.',
+          rating: 5
+        },
+        {
+          name: 'د. فاطمة بن علي',
+          position: 'مديرة المركز الطبي بنغازي',
+          content: 'المنصة الصحية التي بناها ثِنك تك غيرت طريقة إدارتنا لمواعيد المرضى والسجلات الطبية. فريق محترف جداً.',
           rating: 5
         },
         {
           name: 'عمر خليل',
-          position: 'مؤسس، بنغازي ستارت أب',
-          content: 'محترفون وموثوقون ومبدعون. ثِنك تك ساعدتنا في إطلاق حضورنا الرقمي بموقع مذهل واستراتيجية SEO فعالة.',
+          position: 'مدير مركز ليبيا التجاري',
+          content: 'محترفون وموثوقون ومبدعون. ثِنك تك ساعدتنا في تأسيس حضور رقمي قوي بموقع شركة متعدد اللغات يخدم عملاءنا الدوليين.',
+          rating: 5
+        },
+        {
+          name: 'م. سارة الزاوية',
+          position: 'مديرة تقنية، مركز طرابلس التقني',
+          content: 'المنصة التعليمية التي طوروها مكنتنا من الوصول لآلاف الطلاب عبر ليبيا. المجموعة التقنية قوية وقابلة للتطوير.',
           rating: 5
         }
       ]
@@ -75,7 +99,7 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ language }) => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {currentContent.testimonials.map((testimonial, index) => (
+          {currentContent.testimonials.slice(0, 3).map((testimonial, index) => (
             <div 
               key={index}
               className="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"

@@ -32,8 +32,8 @@ export const Contact: React.FC<ContactProps> = ({ language }) => {
       whatsapp: 'Chat on WhatsApp',
       contact: {
         title: 'Get in Touch',
-        email: 'hello@thynktech.ly',
-        phone: '+218 91 234 5678',
+        email: 'ornardoxx@gmail.com',
+        phone: '+218 93 053 8733',
         address: 'Tripoli, Libya'
       }
     },
@@ -50,8 +50,8 @@ export const Contact: React.FC<ContactProps> = ({ language }) => {
       whatsapp: 'تحدث عبر الواتساب',
       contact: {
         title: 'تواصل معنا',
-        email: 'hello@thynktech.ly',
-        phone: '+218 91 234 5678',
+        email: 'ornardoxx@gmail.com',
+        phone: '+218 93 053 8733',
         address: 'طرابلس، ليبيا'
       }
     }
@@ -61,8 +61,20 @@ export const Contact: React.FC<ContactProps> = ({ language }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Create email with form data
+    const emailSubject = encodeURIComponent(`New Contact Form Submission from ${formData.name}`);
+    const emailBody = encodeURIComponent(`
+Name: ${formData.name}
+Email: ${formData.email}
+Company: ${formData.company}
+Message: ${formData.message}
+    `);
+    
+    // Open email client
+    window.location.href = `mailto:ornardoxx@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+    
     console.log('Form submitted:', formData);
-    // Handle form submission here
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -166,7 +178,7 @@ export const Contact: React.FC<ContactProps> = ({ language }) => {
               
               <Button 
                 className="w-full bg-green-500 hover:bg-green-600 text-white py-6 text-lg font-semibold rounded-xl transition-all duration-300"
-                onClick={() => window.open('https://wa.me/218912345678', '_blank')}
+                onClick={() => window.open('https://wa.me/218930538733', '_blank')}
               >
                 <MessageSquare className="mr-2 h-5 w-5" />
                 {currentContent.whatsapp}
