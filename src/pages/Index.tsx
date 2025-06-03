@@ -1,12 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useState } from 'react';
+import { Header } from '@/components/Header';
+import { Hero } from '@/components/Hero';
+import { About } from '@/components/About';
+import { Services } from '@/components/Services';
+import { TechStack } from '@/components/TechStack';
+import { Portfolio } from '@/components/Portfolio';
+import { Testimonials } from '@/components/Testimonials';
+import { Contact } from '@/components/Contact';
+import { Footer } from '@/components/Footer';
+import { WhatsAppFloat } from '@/components/WhatsAppFloat';
 
 const Index = () => {
+  const [language, setLanguage] = useState<'en' | 'ar'>('en');
+
+  const toggleLanguage = () => {
+    setLanguage(prev => prev === 'en' ? 'ar' : 'en');
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className={`min-h-screen ${language === 'ar' ? 'rtl' : 'ltr'}`}>
+      <Header language={language} onLanguageToggle={toggleLanguage} />
+      <Hero language={language} />
+      <About language={language} />
+      <Services language={language} />
+      <TechStack language={language} />
+      <Portfolio language={language} />
+      <Testimonials language={language} />
+      <Contact language={language} />
+      <Footer language={language} />
+      <WhatsAppFloat language={language} />
     </div>
   );
 };
