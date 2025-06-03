@@ -39,7 +39,7 @@ export const Footer: React.FC<FooterProps> = ({ language }) => {
       },
       contact: {
         title: 'Contact',
-        email: 'ornardoxx@gmail.com',
+        email: 'thynktech@gmail.com',
         phone: '+218 93 053 8733',
         address: 'Tripoli, Libya'
       },
@@ -67,7 +67,7 @@ export const Footer: React.FC<FooterProps> = ({ language }) => {
       },
       contact: {
         title: 'تواصل معنا',
-        email: 'ornardoxx@gmail.com',
+        email: 'thynktech@gmail.com',
         phone: '+218 93 053 8733',
         address: 'طرابلس، ليبيا'
       },

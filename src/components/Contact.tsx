@@ -32,7 +32,7 @@ export const Contact: React.FC<ContactProps> = ({ language }) => {
       whatsapp: 'Chat on WhatsApp',
       contact: {
         title: 'Get in Touch',
-        email: 'ornardoxx@gmail.com',
+        email: 'thynktech@gmail.com',
         phone: '+218 93 053 8733',
         address: 'Tripoli, Libya'
       }
@@ -50,7 +50,7 @@ export const Contact: React.FC<ContactProps> = ({ language }) => {
       whatsapp: 'تحدث عبر الواتساب',
       contact: {
         title: 'تواصل معنا',
-        email: 'ornardoxx@gmail.com',
+        email: 'thynktech@gmail.com',
         phone: '+218 93 053 8733',
         address: 'طرابلس، ليبيا'
       }
